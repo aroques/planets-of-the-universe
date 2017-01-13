@@ -1,5 +1,15 @@
 ---
-layout: default
+layout: news
 ---
 
 <h1>News</h1>
+
+<ul>
+  <!-- Jekyll for loop example -->
+  {% for news in site.categories.news %} <!-- news variable can be called anything (this is essentially a for each loop) -->
+  <li>
+    <a href="{{site.baseurl}}{{news.url}}">{{news.title}}</a>
+    <p>{{news.meta}}</p>
+  </li>
+  {% endfor %}
+</ul>
